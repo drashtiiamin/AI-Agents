@@ -28,13 +28,3 @@ root_agent = Agent(
     output_schema=EmailOutput,
     output_key="email_draft",
 )
-
-from google.adk.memory import InMemoryMemory
-from google.adk.agents.llm_agent import AgentRunner 
-# Initialize memory
-memory = InMemoryMemory()   
-# Create AgentRunner with memory
-agent_runner = AgentRunner(
-    agent=root_agent,
-    memory=memory,
-)   
